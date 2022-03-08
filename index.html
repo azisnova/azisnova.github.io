@@ -1,640 +1,1741 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>azis &amp; nova</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html>
+<head>
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+
+    <meta charset="UTF-8">
+    <title>The Wedding of Azis & Nova</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Spesial mengundang untuk menghadiri pernikahan kami." />
+    <meta name="keywords" content="undangan digital, undangan online, undangan nikah, website undangan, pernikahan, wedding, marriage" />
+    <meta name="author" content="Lalu Parhan Azis Soenandar & Baiq Nova Angela Oktaviani" />
+    <meta name="robots" content="follow, index" />
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,400i,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <meta property="og:title" content="The Wedding of Annisa & Marow" />
+    <meta property="og:description" content="Minggu, 15 Mei 2022" />
+    <meta property="og:url" content="https://azisnova.github.io" />
+    <meta property="og:image" itemprop="image" content="https://raw.githubusercontent.com/azisnova/azisnova.github.io/main/images/thumbnailweb.jpg" />
+    <meta property="og:site_name" content="Wedding Invitation" />
+    <meta property="og:type" content="website" /> 
+
+    <link rel="stylesheet" href="w3style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="./atemplate/jquery-1.8.2.js"></script>
+       <style type="text/css">
+            #overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                filter:alpha(opacity=70);
+                -moz-opacity:0.7;
+                -khtml-opacity: 0.7;
+                opacity: 0.7;
+                z-index: 100;
+                display: none;
+            }
+            .cnt223 a{
+                text-decoration: none;
+            }
+            .popup{
+                width: 100%;
+                margin: 0 auto;
+                display: none;
+                position: fixed;
+                z-index: 101;
+            }
+            .cnt223{
+               /* min-width: 600px;*/
+                width: 100%;
+                min-height: 150px;
+                margin: 100px auto;
+                background-image: url("./assets/10.jpg");
+                background-position: center;
+                position: relative;
+                z-index: 103;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px #000;
+            }
+            .cnt223 p{
+                clear: both;
+                color: #555555;
+                text-align: center;
+            }
+            .cnt223 p a{
+                background-color: #39473d;
+                text-align: center;
+                padding: 20px 30px;
+                margin: auto;
+                color: white;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+            .cnt223 p img {
+                text-align: center;
+                margin: auto;
+            }
+            .cnt223 .x{
+                float: right;
+                height: 35px;
+                left: 22px;
+                position: relative;
+                top: -25px;
+                width: 34px;
+            }
+            .cnt223 .x:hover{
+                cursor: pointer;
+            }
+
+            .imgopenint img {
+                width: 100px;
+            }
+
+            @media  screen and (min-width: 600px) {
+            .imgopenint img {
+                width: 100px;
+            }
+        }
+
+        </style>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .w3-half img{
+            margin-bottom: -6px;
+            cursor: pointer
+            z-index: -99;
+        }
+
+        .w3-half img:hover{opacity: 0.6; transition: 0.3s}
+
+
+        /* Set height of body and the document to 100% */
+        body,
+        html {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        @font-face{
+        src: url('./atemplate/Litine.ttf');
+        font-family: litine;
+        }
+
+
+        @font-face{
+            src: url('./atemplate/Angelface.otf');
+            font-family: Angelface;
+            }
+
+        @font-face{
+            src: url('./atemplate/dosis.ttf');
+            font-family: dosis;
+        }
+
+        @font-face{
+            src: url('./atemplate/Aldine.ttf');
+            font-family: aldine;
+        }
+
+        .iconbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            /* background-color: #bababa; */
+            background-color: #172740;
+            overflow: auto;
+            z-index: 999999;
+        }
+
+        .iconbar a {
+            float: left;
+            width: 25%;
+            text-align: center;
+            padding-bottom: 5px;
+            color: white;
+            font-size: 30px;
+            transition: all 0.3s ease;
+        }
+
+        /* Style tab links */
+        .tablink {
+            background-image: url("./assets/10.jpg");
+            background-position: center;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 17px;
+            width: 20%;
+
+        }
+
+        .tablink:hover {
+            opacity: 0.9;
+            /*background-color: #777;*/
+        }
+
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: black;
+            text-align: center;
+            display: none;
+            /* padding: 30px 20px; */
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 100%;
+            position: relative;
+        }
+
+
+        .corner1{
+            width: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9;
+        }
+
+        .corner2{
+            width: 200px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 9;
+        }
+
+        .corner3{
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 9;
+        }
+
+        .corner4{
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 9;
+        }
+
+        .corner5{
+            width: 70%;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 9;
+        }
+
+        .corner6{
+            width: 70%;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9;
+        }
+
+        .contentwd {
+            position: relative;
+            z-index: 99;
+        }
+
+        #Cover {
+            /* background-color: #ffc2d6;
+            background-image: linear-gradient(#ffc2d6, #f79cba);*/
+            background-image: url("./assets/10.jpg");
+            background-position: center;
+        }
+
+        #Couple {
+            background-image: url("./assets/10.jpg");
+            background-position: center;
+        }
+
+        #Eventwd {
+            background-image: url("./assets/10.jpg");
+            background-position: center;
+        }
+
+        #Moment {
+            background-image: url("./assets/10.jpg");
+            background-position: center;
+        }
+
+        #Quotewd {
+            background-image: url("./assets/10.jpg");
+            background-position: center;
+        }
+
+        .explainbride {
+            font-family: dosis;
+            color: #404040;
+        }
+
+        .bridefont {
+            font-family: litine;
+            font-size: 20px;
+            color: #404040;
+            animation : mempelai 5s infinite;
+        }
+        
+        @keyframes mempelai{
+            from {color : #404040;}
+            to {color : #ECAE37;}
+        }
+
+        .yearstory
+        {
+            animation : year 5s infinite;
+        }
+
+        @keyframes year{
+            from {color : #404040;}
+            to {color : #ECAE37;}
+        }
+        .fontfront {
+            font-family: aldine;
+            font-size: 70px;
+            color: white;
+            text-shadow: 2px 2px 2px grey;
+        }
+
+
+        /*** music box ***/
+        .music-box {
+        position: fixed;
+        width: 300px;
+        height: 160px;
+        z-index: 120;
+        bottom: 30px;
+        right: 30px;
+        }
+
+        @media (max-width: 991px) {
+        .music-box {
+            width: 50px;
+            height: 150px;
+            right: auto;
+            right:10px;
+            top:10px;
+        }
+        }
+
+        .music-box .music-holder {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: -30px;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        }
+
+        .music-box .music-holder iframe {
+        width: 100%;
+        height: 100%;
+        }
+
+        .music-box button {
+        background: rgba(248, 246, 246, 0.85);
+        width: 50px;
+        line-height: 37px;
+        font-size: 18px;
+        font-size: 1rem;
+        color: #68192b;
+        border: 1px solid #e6e6e6;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        }
+
+        .music-box button i{
+            font-size: 20px;
+        }
+
+        @media (max-width: 991px) {
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+            .music-box button {
+                right: 0;
+                left: auto;
+            }
+        }
 
-    <link rel="stylesheet" href="css/aos.css">
+        .music-box .toggle-music-box {
+        top: -50px;
+        visibility: visible;
+        opacity: 1;
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Wedding</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+        }
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#groom-bride-section" class="nav-link"><span>Groom &amp; Bride</span></a></li>
-	          <li class="nav-item"><a href="#lovestory-section" class="nav-link"><span>Love Story</span></a></li>
-	          <li class="nav-item"><a href="#greeting-section" class="nav-link"><span>Greetings</span></a></li>
-	          <li class="nav-item"><a href="#people-section" class="nav-link"><span>People</span></a></li>
-	          <li class="nav-item"><a href="#when-where-section" class="nav-link"><span>When &amp; Where</span></a></li>
-	          <li class="nav-item"><a href="#rsvp-section" class="nav-link"><span>RSVP</span></a></li>
-	          <li class="nav-item"><a href="#gallery-section" class="nav-link"><span>Gallery</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
 
-	  <section id="home" class="video-hero js-fullheight" style="height: 700px; background-image: url(images/bg_1.jpg); background-size:cover; background-position: top center;" data-stellar-background-ratio="0.5">
-	  	<div class="overlay"></div>
-			<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=Mjjw19B7rMk',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default',optimizeDisplay:true}"></a>
-			<div class="container">
-				<div class="row js-fullheight justify-content-center d-flex align-items-center">
-					<div class="col-md-12">
-						<div class="text text-center">
-							<!-- <div class="icon">
-								<span class="flaticon-rose-outline-variant-with-vines-and-leaves"></span>
-							</div> -->
-							<span class="subheading">The Wedding of</span>
-							<h1>Azis &amp; Nova</h1>
-							<div id="timer" class="d-flex">
-							  <div class="time" id="days"></div>
-							  <div class="time pl-3" id="hours"></div>
-							  <div class="time pl-3" id="minutes"></div>
-							  <div class="time pl-3" id="seconds"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+        .music {
+        padding: 0;
+        background: none !important;
+        border: none !important;
+        position: relative;
+        top: 100px;
+        left: 180px;
+        }
 
-		<section class="ftco-section ftco-about ftco-no-pt ftco-no-pb" id="groom-bride-section">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-12">
-    				<div class="wrap">
-			    		<div class="row d-flex">
-			    			<div class="col-md-6 d-flex">
-			    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/about.jpg);">
-			    				</div>
-			    			</div>
-			    			<div class="col-md-6 py-md-5 text">
-			    				<div class="py-md-4">
-				    				<div class="row justify-content-start pb-3">
-						          <div class="col-md-12 ftco-animate p-4 p-lg-5 text-center">
-						          	<span class="subheading mb-4">Join us to celebrate <br>the wedding day of</span>
-						            <h2 class="mb-4">Azis <span>&amp;</span> Nova</h2>
-						            <span class="icon flaticon-rose-variant-outline-with-vines"></span>
-						            <span class="subheading">Which is celebration on</span>
-						           	<p class="time mb-4"><span>Oktober | 2 | 2021</span></p>
-						           	<span class="subheading mb-5">Starting at 8:00 <br> in the morning</span>
-						           	<span class="subheading mb-5">Kembang Kuning <br> in Lombok Inn</span>
-						          </div>
-						        </div>
-					        </div>
-				        </div>
-			        </div>
-			      </div>
-		      </div>
-		    </div>
-    	</div>
-    </section>
+        .music:focus {
+        outline: none;
+        }
 
-    <section class="ftco-section bg-section">
-    	<div class="overlay-top" style="background-image: url(images/top-bg.jpg);"></div>
-    	<div class="overlay-bottom" style="background-image: url(images/bottom-bg.jpg);"></div>
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="clone">Bride &amp; Groom</span>
-            <h2 class="mb-3">Bride &amp; Groom</h2>
-          </div>
+        .fa-stack{
+            right:12px;
+            top: -65px;
+            width: 0;
+            height: 0;
+        }
+
+        .containerngunduhwd {
+            margin: auto;
+            text-align: center;
+            font-family: dosis;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .containerngunduhwd table {
+            margin: auto;
+            text-align: left;
+        }
+
+        .containersatuwd {
+            margin: auto;
+            text-align: center;
+            font-family: dosis;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .containersatuwd table {
+            margin: auto;
+            text-align: left;
+        }
+
+
+        .containerijabwd {
+            margin-left: 5%;
+            text-align: left;
+            font-family: dosis;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .containerweddingwd {
+            margin-right: 5%;
+            text-align: right;
+            font-family: dosis;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .containerlovegiftwd {
+            background:url(../assets/10.jpg);
+            text-align: center;
+            font-family: dosis;
+            font-size: 14px;
+            line-height: 1;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 6px;
+            width : 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* jam */
+        h1{
+        font-family: dosis;
+        color: #396;
+        font-weight: 100;
+        font-size: 40px;
+        margin: 40px 0px 20px;
+        }
+        #clockdiv{
+            font-family: dosis;
+            color: grey;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+        }
+        #clockdiv > div{
+            padding: 1px;
+            border-radius: 3px;
+            /* background: #00BF96;  */
+            display: inline-block;
+        }
+        #clockdiv div > span{
+            padding: 1px;
+            border-radius: 3px;
+            /* background: #00816A;  */
+            display: inline-block;
+        }
+
+        #day {
+            font-size: 50px;
+            color: red;
+        }
+
+        .smalltext{
+            padding-top: 2px;
+            font-size: 24px;
+            font-family: Angelface;
+        }
+
+        .ornamentwdtop {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .ornamentbg{
+            position: absolute;
+            z-index: -4;
+            top: 50px;
+            width: 30%;
+            opacity: 1;
+        }
+
+        .ornamentbg img {
+            width: 40%;
+        }
+
+        .ornamentwdtop img {
+            width: 60%;
+        }
+
+        .ornamentwdbtm img {
+            width: 40%;
+        }
+
+        .timeline h2 {
+            color: #404040;
+        }
+
+        @media screen and (min-width: 900px) {
+            .vidline {
+                padding-left: 30%;
+                padding-right: 30%;
+            }
+
+        }
+
+        @media  screen and (min-width: 600px) {
+            .cardevent {
+            margin-left: 20%;
+            margin-right: 20%;
+            }
+
+            .borderpair {
+                width: 60%;
+            }
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .corner1 {
+                width: 150px;
+            }
+
+            .corner2 {
+                width: 150px;
+            }
+
+            .corner3 {
+                width: 150px;
+            }
+
+            .corner4 {
+                width: 150px;
+            }
+
+            .corner5 {
+                width: 100%;
+            }
+
+            .corner6 {
+                width: 100%;
+            }
+
+            .ornamentbg img {
+                width: 100%;
+            }
+
+            .ornamentwdtop img {
+                width: 100%;
+            }
+
+            .ornamentwdbtm img {
+                width: 100%;
+            }
+
+            .containerijabwd {
+                margin-left: 10%;
+            }
+
+            .containerweddingwd {
+                margin-right: 10%;
+            }
+
+            .borderpair {
+                width: 100%;
+                margin: auto;
+            }
+
+        }
+
+        /* comment section */
+
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+
+        input[type=submit] {
+          background-color: #39473d;
+          width: 100%;       
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+          background-color: #527d55;
+        }
+
+        input[type=button] {
+          background-color: #39473d;
+          width: 20%;       
+          color: white;
+          padding-left: 12px;
+          padding-right: 12px;
+          padding-bottom: 12px;
+          padding-top: 12px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        input[type=button]:hover {
+          background-color: #527d55;
+        }
+
+        .wishcontainer {
+            text-align: left;
+            font-family: dosis;
+        }
+
+        .wishspace {
+          border-radius: 5px;
+          /* background-color: #f2f2f2; */
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 20px;
+          color: #404040;
+        }
+
+        .wishdisplay {
+            text-align: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-family: dosis;
+            max-height: 400px;
+            overflow: scroll;
+        }
+
+        .wishdisplayname {
+            font-weight: bold;
+        }
+
+        /* width */
+        .wishdisplay::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        /* Handle */
+        .wishdisplay::-webkit-scrollbar-thumb {
+          background: #888;
+        }
+
+        /* Handle on hover */
+        .wishdisplay::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+
+        @media screen and (max-width: 1000px) {
+        .containerlovegiftwd 
+        {
+            width:85%;
+            padding-left:5%;
+            padding-right:5%;
+        }
+        input[type=button] {
+          background-color: #39473d;
+          width: 70%;       
+          color: white;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          
+        }
+
+        input[type=button]:hover {
+          background-color: #527d55;
+        }
+
+        .hormatkami
+        {
+            font-family: dosis;
+            font-size: 14px;
+            margin-left:auto;
+            margin-right: auto;
+        }
+    }
+
+
+    .lineanim{
+        background:#404040; 
+        height:1.1px; 
+        margin-left: auto; 
+        margin-right: auto;
+        animation : lineone 3s infinite;
+    }
+
+    @keyframes lineone {
+    from {width: 0px;}
+    to {width: 120px;}
+    }
+
+/* Ngetes */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  font-family: dosis;
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 270px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.closemodal {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closemodal:hover,
+.closemodal:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: white;
+  color: black;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: white;
+  color: black;
+}
+/* Ngetes */
+
+    </style>
+
+    <script type='text/javascript'>
+        $(function(){
+        var overlay = $('<div id="overlay"></div>');
+        overlay.show();
+        overlay.appendTo(document.body);
+        $('.popup').show();
+        $('.close').click(function(){
+        $('.popup').hide();
+        overlay.appendTo(document.body).remove();
+        return false;
+        });
+
+
+        $('.x').click(function(){
+        $('.popup').hide();
+        overlay.appendTo(document.body).remove();
+        return false;
+        });
+        });
+    </script>
+</head>
+
+<body>
+        <span itemprop="image" itemscope itemtype="image/jpeg"> 
+            <link itemprop="url" href="https://raw.githubusercontent.com/azisnova/azisnova.github.io/main/images/thumbnailweb.jpg"> 
+         </span>
+         
+        <div class='popup'>
+        <div class='cnt223'>
+            <p><img src="assets/de13vintopwd.png" width="60%" style="text-align: center"></p>
+            <p class="imgopenint"><img class='close' src="images/openerimg.png" style="text-align: center"></p>
+
+            <p style="text-align: center; line-height: normal;">Kepada Yth.<br><span style="font-size:12px">Bapak/Ibu/Saudara/i</span></p>
+
+            <p style="color: #404040; font-size: 20px; font-weight:bold; padding-bottom:10px; border-radius:4px; text-align: center" id="write"></p>
+        </p>
+        <p><a href='#' id="unmute-sound" class='close'>Buka Undangan</a></p>
+
+        <div style="clear: both;"></div>
+
+        <p><img src="assets/de13vintopwd.png" width="60%" style="transform: rotate(180deg); text-align: center"></p>
         </div>
-        <div class="row justify-content-center">
-        	<div class="col-md-10">
-        		<div class="row">
-		        	<div class="col-md-6 text-center d-flex align-items-stretch">
-		        		<div class="bride-groom ftco-animate">
-		        			<div class="img" style="background-image: url(images/groom.jpg);"></div>
-		        			<div class="text mt-4 px-4">
-		        				<h2>Lalu Parhan Azis Soenandar</h2>
-		        				<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
-		        			</div>
-		        		</div>
-		        	</div>
-		        	<div class="col-md-6 text-center d-flex align-items-stretch">
-		        		<div class="bride-groom ftco-animate">
-		        			<div class="img" style="background-image: url(images/bride.jpg);"></div>
-		        			<div class="text mt-4 px-4">
-		        				<h2>Baiq Nova Angela Oktaviani</h2>
-		        				<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
-		        			</div>
-		        		</div>
-		        	</div>
-		        </div>
-		      </div>
-        </div>
-    	</div>
-    </section>
-   
-   	<section class="ftco-section" id="lovestory-section">
-   		<div class="container">
-   			<div class="row justify-content-center pb-5">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="clone">Love Story</span>
-            <h2 class="mb-3">Love Story</h2>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-        		<ul class="timeline animate-box">
-							<li class="animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
-								<div class="timeline-panel ftco-animate text-md-right">
-									<div class="overlay"></div>
-									<div class="timeline-heading">
-										<span class="date">June 10, 2017</span>
-										<h3 class="timeline-title">First We Meet</h3>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
-								<div class="timeline-panel ftco-animate">
-									<div class="overlay overlay-2"></div>
-									<div class="timeline-heading">
-										<span class="date">June 10, 2017</span>
-										<h3 class="timeline-title">First Date</h3>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
-									</div>
-								</div>
-							</li>
-							<li class="animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
-								<div class="timeline-panel ftco-animate text-md-right">
-									<div class="overlay"></div>
-									<div class="timeline-heading">
-										<span class="date">June 14, 2017</span>
-										<h3 class="timeline-title">In A Relationship</h3>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-4.jpg);"></div>
-								<div class="timeline-panel ftco-animate">
-									<div class="overlay overlay-2"></div>
-									<div class="timeline-heading">
-										<span class="date">May. 10, 2019</span>
-										<h3 class="timeline-title">We're Engaged</h3>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
-									</div>
-								</div>
-							</li>
-			    	</ul>
-        	</div>
-        </div>
-   		</div>
-   	</section>
 
-   	<section class="ftco-section bg-light" id="greeting-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="clone">Testimony</span>
-            <h2 class="mb-3">Sweet Messages</h2>
-          </div>
+    </div>
+
+    <!-- start button pesan via WA -->
+    <!-- <button onclick="window.location.href='https://api.whatsapp.com/send?phone=6282112538367&text=Kak%20Abtohi%0ASaya%20ingin%20pesan%20Undangan%20Digital%20Pernikahan%20seperti%20Demo13'" id="myBtn4" title="Pesan Undangan"><i class="w3-bar-block fa fa-whatsapp"></i> <span style="font-size:12px">Pesan</span></button> -->
+    <!-- end button pesan via WA -->
+
+    <div class="music-box">
+        <button class="music-box-toggle-btn">
+            <!--
+                <i class="fa fa-music"></i> -->
+            <audio id='song' loop>
+                <source src="assets/Take My Hand.mp3">
+            </audio>
+
+            <button type="button" class="music" id="unmute2-sound">
+                <img border="0" alt="" src="assets/soundgoldmusicoffwd.png"
+                    width="20" height="20">
+            </button>
+            <button type="button" class="music" id="mute-sound">
+                <img border="0" alt="" src="assets/soundgoldmusicwd.png"
+                    width="20" height="20">
+            </button>
+            
+        </button>
+    </div>
+
+    <div class="iconbar">
+        <a class="tablink" onclick="openPage('Cover', this, '#ffd4ed')" id="defaultOpen"><img src="assets/de13tab1cover.png" width="35"></a>
+        <a class="tablink" onclick="openPage('Couple', this, '#ffd4ed')"><img src="assets/de13tab2couple.png" width="35"></a>
+        <a class="tablink" onclick="openPage('Eventwd', this, '#ffd4ed')"><img src="assets/de13tab3event.png" width="35"></a>
+        <a class="tablink" onclick="openPage('Quotewd', this, '#ffd4ed')"><img src="assets/de13tab5story.png" width="35"></a>
+    </div>
+
+
+    <div id="Cover" class="tabcontent">
+        <!-- <h3>Home</h3>
+        <p>Home is where the heart is..</p> -->
+
+        <div class="corner1">
+            <img src="assets/de13oraset1.png" alt="" width="100%">
         </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
+
+        <div class="corner2">
+            <img src="assets/de13oraset2.png" alt="" width="100%">
+        </div>
+
+        <div class="corner3">
+            <img src="assets/de13oraset3.png" alt="" width="100%">
+        </div>
+
+        <div class="corner4">
+            <img src="assets/de13oraset4.png" alt="" width="100%">
+        </div>
+
+        <div class="corner5">
+            <img src="assets/de13oraset5.png" alt="" width="100%">
+        </div>
+
+        <div class="corner6">
+            <img src="assets/de13oraset6.png" alt="" width="100%">
+        </div>
+
+
+        <div id="homewd" class="contentwd">
+            <div class="ornamentwdtop" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vintopwd.png" alt="" style="display: inline-block;" width="100%">
             </div>
-          </div>
-        </div>
-    	</div>
-    </section>
+<div class="content4pad">
+            <div>
+                <br>
+                <h2 style="color: #404040; font-size: 35px; font-family: Angelface; padding-top: 10px">The Wedding<br><span style="font-size:12px" class="explainbride">Official Invitation</span></h2>
+            </div>
+                <div class="borderpair">
+                        <div class="namepair" style="line-height: 210%; padding-top: 70px">
+                            <div style="padding-right:40px"><span class="fontfront">Azis</span></div>
+                            <div class="" style="color:white">&</div>
+                            <div style="padding-left:40px; padding-top:5px;"><span class="fontfront">Nova</span></div>
+                        </div> 
+                        <div class="behindcname w3-spin"><img src="assets/de13namecirclepair.png"></div>  
+                </div>    
+                <p style="color: #404040; font-weight:bold; padding-top:10px; padding-bottom:10px; border-radius:4px" id="write"></p>
+            <div>
+                <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=The%20Wedding%20of%20Azis%20and%20Nova&dates=20220515T010000Z/20220515T020000Z&details=The%20Wedding%20of%20Azis%20and%20Nova&location=Kembang%20Kuning%20Lombok%20Timur" target="_blank" style="background-color: #39473d; font-family: dosis; font-size: 18px; color: white; padding: 18px 30px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px"><strong>SaveTheDate</strong></a>
+                <p style="color: #404040; font-size: 30px; font-family: Angelface; padding-top: 1px">| 15 Mei 2022 | <br><span style="font-size:12px"
+                        class="explainbride">Kembang Kuning, Sikur, Lombok Timur</span></p>
+            </div>
 
-    <section class="ftco-section" id="people-section">
-    	<div class="container-fluid px-md-5">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="clone">People</span>
-            <h2 class="mb-3">Family &amp; Friends</h2>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-        		<div class="carousel-friends owl-carousel ftco-owl ftco-animate">
-        			<div class="item">
-                <div class="people text-center">
-		        			<div class="img" style="background-image: url(images/groom-men-1.jpg);"></div>
-		        			<div class="text">
-		        				<h3>Mark Tomy</h3>
-		        				<span>Groomsmen</span>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-                <div class="people text-center">
-		        			<div class="img" style="background-image: url(images/groom-men-2.jpg);"></div>
-		        			<div class="text">
-		        				<h3>John Henceworth</h3>
-		        				<span>Groomsmen</span>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-                <div class="people text-center">
-		        			<div class="img" style="background-image: url(images/groom-men-3.jpg);"></div>
-		        			<div class="text">
-		        				<h3>Rey Cooper</h3>
-		        				<span>Groomsmen</span>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-                <div class="people text-center">
-		        			<div class="img" style="background-image: url(images/groom-men-4.jpg);"></div>
-		        			<div class="text">
-		        				<h3>Robert Chan</h3>
-		        				<span>Groomsmen</span>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-                <div class="people text-center">
-		        			<div class="img" style="background-image: url(images/bridesmaid-1.jpg);"></div>
-		        			<div class="text">
-		        				<h3>Rose Jones</h3>
-		        				<span>Bridesmaid</span>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-                <div class="people text-center">
-		        			<div class="img" style="background-image: url(images/bridesmaid-2.jpg);"></div>
-		        			<div class="text">
-		        				<h3>Mary Dell</h3>
-		        				<span>Bridesmaid</span>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-                <div class="people text-center">
-		        			<div class="img" style="background-image: url(images/bridesmaid-3.jpg);"></div>
-		        			<div class="text">
-		        				<h3>Alicia Brean</h3>
-		        				<span>Bridesmaid</span>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-                <div class="people text-center">
-		        			<div class="img" style="background-image: url(images/bridesmaid-4.jpg);"></div>
-		        			<div class="text">
-		        				<h3>Angel Worth</h3>
-		        				<span>Bridesmaid</span>
-		        			</div>
-		        		</div>
-              </div>
-        		</div>
-        	</div>
-        </div>
-    	</div>
-    </section>
+            <div class="ornamentbg" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13swirlwd.png" alt="" style="display: inline-block; opacity: 0.3">
+            </div>
+</div>
 
-    <section class="ftco-section bg-light" id="when-where-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="clone">Place</span>
-            <h2 class="mb-3">Place &amp; Time</h2>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-4 ftco-animate">
-        		<div class="place img" style="background-image: url(images/place-1.jpg);">
-        			<div class="text text-center">
-	        			<span class="icon flaticon-reception-bell"></span>
-	        			<h3>The Reception</h3>
-	        			<p><span>Saturday, 28, 2019</span><br><span>02:00 pm-10:00 pm</span></p>
-	        			<p><span>203 Fake St. Mountain View, San Francisco, California, USA</span></p>
-	        			<p><a href="#">+0 (123) 456 78 910</a></p>
-	        			<p><a href="#" class="btn-custom">See Map</a></p>
-	        		</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4 ftco-animate">
-        		<div class="place img" style="background-image: url(images/place-2.jpg);">
-        			<div class="text text-center">
-	        			<span class="icon flaticon-wedding-kiss"></span>
-	        			<h3>The Ceremony</h3>
-	        			<p><span>Saturday, 28, 2019</span><br><span>02:00 pm-10:00 pm</span></p>
-	        			<p><span>203 Fake St. Mountain View, San Francisco, California, USA</span></p>
-	        			<p><a href="#">+0 (123) 456 78 910</a></p>
-	        			<p><a href="#" class="btn-custom">See Map</a></p>
-	        		</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4 ftco-animate">
-        		<div class="place img" style="background-image: url(images/place-3.jpg);">
-        			<div class="text text-center">
-	        			<span class="icon flaticon-cake"></span>
-	        			<h3>The Party</h3>
-	        			<p><span>Saturday, 28, 2019</span><br><span>02:00 pm-10:00 pm</span></p>
-	        			<p><span>203 Fake St. Mountain View, San Francisco, California, USA</span></p>
-	        			<p><a href="#">+0 (123) 456 78 910</a></p>
-	        			<p><a href="#" class="btn-custom">See Map</a></p>
-	        		</div>
-        		</div>
-        	</div>
-        </div>
-    	</div>
-    </section>
+            <div class="ornamentwdbtm" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vinbtmwd.png" alt="" style="display: inline-block;">
+            </div>
+            <br>
+            <br>
+            <br>
 
-    <section class="ftco-section bg-secondary" id="rsvp-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="clone">RSVP</span>
-            <h2 class="mb-3">Are Your Attending?</h2>
-          </div>
         </div>
-        <div class="row justify-content-center">
-        	<div class="col-md-7">
-        		<form action="#" class="rsvp-form ftco-animate">
-	    				<div class="">
-		    				<div class="form-group">
-		    					<input type="text" class="form-control" placeholder="Name">
-		    				</div>
-		    				<div class="form-group">
-		    					<input type="text" class="form-control" placeholder="Your email">
-		    				</div>
-	    				</div>
-	    				<div class="">
-	    					<div class="form-group">
-		    					<div class="form-field">
-          					<div class="select-wrap">
-                      <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="" id="" class="form-control">
-                      	<option value="">Guest</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                      </select>
+
+
+    </div>
+
+    <div id="Couple" class="tabcontent">
+        <!-- <h3>News</h3>
+        <p>Some news this fine day!</p> -->
+
+        <div class="corner1">
+            <img src="assets/de13oraset1.png" alt="" width="100%">
+        </div>
+
+        <div class="corner2">
+            <img src="assets/de13oraset2.png" alt="" width="100%">
+        </div>
+
+        <div class="corner3">
+            <img src="assets/de13oraset3.png" alt="" width="100%">
+        </div>
+
+        <div class="corner4">
+            <img src="assets/de13oraset4.png" alt="" width="100%">
+        </div>
+
+        <div class="corner5">
+            <img src="assets/de13oraset5.png" alt="" width="100%">
+        </div>
+
+        <div class="corner6">
+            <img src="assets/de13oraset6.png" alt="" width="100%">
+        </div>
+
+        <div id="bridewd" class="contentwd">
+
+            <div class="ornamentwdtop" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vintopwd.png" alt="" style="display: inline-block;">
+            </div>
+
+<div class="content4pad">
+            <div>
+                <p style="font-size: 30px; font-family: Angelface; padding-top: 30px; color: #404040">Bismillahirrahmanirrahim</p>
+                <div class="explainbride">Assalamu`alaikum Warahmatullahi Wabarakatuh<br><br>
+                    Maha Suci Allah<br>yang telah menciptakan makhluk-Nya<br>berpasang-pasangan.<br>Ya Allah semoga ridho-Mu tercurah<br>mengiringi pernikahan putra-putri kami:</div>
+            </div>
+            <br>
+            <div><img src="images/wdbride.png" width="40%" alt=""><br><span class="bridefont">Lalu Parhan Aziz Soenandar<span style="font-size: 14px"></span></span>
+            </div>
+            <div class="explainbride">Anak ketiga dari<br>Bpk. H. Lalu Iskandar & Ibu Baiq Saodah</div>
+            
+            <br>
+            <div class="explainbride">dan</div>
+            <br>
+            <div><img src="images/wdgroom.png" width="40%" alt=""><br><span class="bridefont">Baiq Nova Angela Oktaviani<span style="font-size: 14px"></span></span>
+            </div>
+            <div class="explainbride">Anak kedua dari<br>Bpk. Lalu Awaludin & Ibu Surya Darmiyanti</div>
+            <br>
+            <br>
+            <br>
+</div>
+            <div class="ornamentwdbtm" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vinbtmwd.png" alt="" style="display: inline-block;" width="100%">
+            </div>
+            <br>
+            <br>
+            <br>
+
+        </div>
+
+
+
+    </div>
+
+    <div id="Eventwd" class="tabcontent">
+
+        <div class="corner1">
+            <img src="assets/de13oraset1.png" alt="" width="100%">
+        </div>
+
+        <div class="corner2">
+            <img src="assets/de13oraset2.png" alt="" width="100%">
+        </div>
+
+        <div class="corner3">
+            <img src="assets/de13oraset3.png" alt="" width="100%">
+        </div>
+
+        <div class="corner4">
+            <img src="assets/de13oraset4.png" alt="" width="100%">
+        </div>
+
+        <div class="corner5">
+            <img src="assets/de13oraset5.png" alt="" width="100%">
+        </div>
+
+        <div class="corner6">
+            <img src="assets/de13oraset6.png" alt="" width="100%">
+        </div>
+
+
+        <div id="homewd" class="contentwd">
+
+            <div class="ornamentwdtop" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vintopwd.png" alt="" style="display: inline-block;" width="100%">
+            </div>
+<div class="content4pad">
+            <br>
+            <h3 style="font-family: Angelface; font-size: 35px; color: #404040">Event</h3>
+            <p class="explainbride">The Happy Day!</p>
+            
+            <p class="lineanim"></p>
+            <br>
+            <p style="font-family: dosis; color: #404040">Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami mengundang Bapak/Ibu/Saudara(i) untuk menghadiri acara pernikahan putra-putri kami</p>
+
+
+            <div class="containersatuwd" style="display: none;">
+                <div>
+                    <p style="font-size: 18px; font-family: dosis; padding-top: 0px"><b>Akad Pernikahan</b></p>
+                </div>
+
+                <table>
+                    <tr>
+                        <td><i class="fa fa-calendar"></i></td>
+                        <td>Minggu, 15 Mei 2022</td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-clock-o"></i></td>
+                        <td>09.00 WITA - selesai</td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-map-marker"></i></td>
+                        <td>Kediaman Mempelai Pria</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Desa Kembang Kuning,</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Kec. Sikur, Kab. Lombok Timur</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>NTB, Indonesia</td>
+                    </tr>
+                </table>
+            </div>
+            <!--<br>-->
+            <!--<br>-->
+
+        <div class="cardevent">
+            <div class="row">
+              <div class="column">
+                    <div class="card">
+
+                        <div class="containerijabwd">
+
+                            <table style="color: #404040">
+                                <tr>
+                                    <th style="width: 20%"><img src="assets/de13wdakad.png" width="100%"></th>
+                                    <th></th>
+                                    <th style="width: 80%"><p style="font-size: 18px; font-family: dosis; color: #404040"><b>Akad Nikah</b></p></th>
+                                </tr>
+                                <!-- <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>(Akad Nikah Khusus Keluarga)</td>
+                                </tr> -->
+                                <tr>
+                                    <td></td>
+                                    <td><i class="fa fa-calendar" style="padding-right:5px;"></i></td>
+                                    <td>Minggu, 15 Mei 2022</td>
+                                </tr>
+                                <tr>
+                                   <td></td>
+                                   <td><br></td>
+                                   <td><br></td>
+                                </tr>
+                                <tr>
+                                   <td></td>
+                                   <td><i class="fa fa-clock-o" style="padding-right:5px;"></i></td>
+                                   <td>09.00 WITA</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><br></td>
+                                    <td><br></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><i class="fa fa-map-marker" style="padding-right:5px;"></i></td>
+                                    <td>di Kediaman Mempelai Pria</td>
+                                </tr>
+                                <tr>
+                                   <td></td>
+                                   <td></td>
+                                   <td>Desa Kembang Kuning</td>
+                                </tr>
+                                <tr>
+                                   <td></td>
+                                   <td></td>
+                                   <td>Kec. Sikur, Kab. Lombok Timur</td>
+                                </tr>
+                                <tr>
+                                   <td></td>
+                                   <td></td>
+                                   <td>NTB, Indonesia</td>
+                                </tr>
+                                <tr>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-		              </div>
-		    				</div>
-	    				</div>
-	    				<div class="">
-	    					<div class="form-group">
-		              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
-		            </div>
-		            <div class="form-group">
-		              <input type="submit" value="I am attending" class="btn btn-primary py-3 px-4">
-		            </div>
-	    				</div>
-	    			</form>
-        	</div>
-        </div>
-    	</div>
-    </section>
+              </div>
 
-    <section class="ftco-section" id="gallery-section">
-    	<div class="container-fluid px-md-4">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-          	<span class="clone">Photos</span>
-            <h2 class="mb-3">Gallery</h2>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-3 ftco-animate">
-        		<a href="images/gallery-1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-1.jpg);">
-        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-        		</a>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<a href="images/gallery-2.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-2.jpg);">
-        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-        		</a>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<a href="images/gallery-3.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-3.jpg);">
-        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-        		</a>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<a href="images/gallery-4.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-4.jpg);">
-        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-        		</a>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<a href="images/gallery-5.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-5.jpg);">
-        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-        		</a>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<a href="images/gallery-6.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-6.jpg);">
-        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-        		</a>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<a href="images/gallery-7.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-7.jpg);">
-        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-        		</a>
-        	</div>
-        	<div class="col-md-3 ftco-animate">
-        		<a href="images/gallery-8.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-8.jpg);">
-        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-        		</a>
-        	</div>
-        </div>
-    	</div>
-    </section>
-    
-  	<footer class="ftco-footer ftco-section">
-    	<div class="overlay"></div>
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Hookup</h2>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
-              <ul class="ftco-footer-social list-unstyled mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Quick Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Wellness</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Vintge stores</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Trekking</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Tour</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Sightseeing</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Many more..</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Groom &amp; Bride</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Story</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Greetings</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>People</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Where &amp; When</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>RSVP</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Gallery</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Organizer</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Venue</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Wedding Ceremony</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Accomodation</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-	
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
+              <div class="column">
+                    <div class="card">
+                          <div class="containerweddingwd">
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+                                <table align="right" style="color: #404040">
+                                    <tr>
+                                        <th  align="right" style="width: 80%;"><p style="font-size: 18px; font-family: dosis; color: #404040"><b>Resepsi Pernikahan</b></p></th>
+                                        <th></th>
+                                        <th style="width: 20%"><img src="assets/de13wdresepsi.png" width="100%"></th>
+                                    </tr>
+                                    <tr align="right">
+                                        <td>Minggu, 15 Mei 2022</td>
+                                        <td><i class="fa fa-calendar" style="padding-left:5px;"></i></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br></td>
+                                        <td><br></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr align="right">
+                                        <td>11.00 WITA - Selesai</td>
+                                        <td><i class="fa fa-clock-o" style="padding-left:5px;"></i></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br></td>
+                                        <td><br></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr align="right">
+                                        <td>di Kediaman Mempelai Pria</td>
+                                        <td><i class="fa fa-map-marker" style="padding-left:5px;"></i></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr align="right">
+                                        <td>Desa Kembang Kuning,</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr align="right">
+                                        <td>Kec. Sikur, Kab. Lombok Timur,</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr align="right">
+                                        <td>NTB, Indonesia</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr align="right">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr align="right">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                        <div style="clear: both;"></div>
+                    </div>
+                    </div>
+              </div>
+            </div>
+        </div>   
+                    
+            <div style="clear:both"></div>
+
+            <br>
+            <div id="clockdiv">
+                <div>
+                    <span class="days" id="day"></span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span class="hours" id="hour"></span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span class="minutes" id="minute"></span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds" id="second"></span>
+                    <div class="smalltext">Seconds</div>
+                </div>
+            </div>
+
+            <p id="demo"></p>
+
+            <p class="explainbride">Merupakan suatu kehormatan dan kebahagiaan<br>bagi kami apabila Bapak/Ibu/Saudara(i)<br>berkenan hadir untuk memberikan do'a restu<br>kepada kedua mempelai.</p>
+
+            <br>
+            <br>
+
+            <div style="width:90%; margin-left: auto; margin-right: auto; border-radius: 6px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d717.8805552244039!2d116.41904237534844!3d-8.563417040037638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdcaaaaee116e1%3A0xdb82a923d573a298!2sMasjid%20Jami&#39;%20Syafaaturroghibin!5e0!3m2!1sid!2ssg!4v1645801587678!5m2!1sid!2ssg" style="border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <br>
+            <div><a href="https://goo.gl/maps/7kCtnRjMgZLs79uh9" target="_blank" style="background-color: #39473d; font-family: dosis; font-size: 18px; color: white; padding: 18px 30px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px"><strong>OpenMap Resepsi</strong></a>
+            </div>
+            <br>
+</div>
+
+            <div class="ornamentwdbtm" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vinbtmwd.png" alt="" style="display: inline-block;" width="100%">
+            </div>
+            <br>
+            <br>
+            <br>
+
+        </div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+    </div>
+
+    <div id="Moment" class="tabcontent">
+
+        <div class="corner1">
+            <img src="assets/de13oraset1.png" alt="" width="100%">
+        </div>
+
+        <div class="corner2">
+            <img src="assets/de13oraset2.png" alt="" width="100%">
+        </div>
+
+        <div class="corner3">
+            <img src="assets/de13oraset3.png" alt="" width="100%">
+        </div>
+
+        <div class="corner4">
+            <img src="assets/de13oraset4.png" alt="" width="100%">
+        </div>
+
+        <div class="corner5">
+            <img src="assets/de13oraset5.png" alt="" width="100%">
+        </div>
+
+        <div class="corner6">
+            <img src="assets/de13oraset6.png" alt="" width="100%">
+        </div>
+
+
+
+
+        <div id="homewd" class="contentwd">
+
+            <div class="ornamentwdtop" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vintopwd.png" alt="" style="display: inline-block;" width="100%">
+            </div>
+<!--Taruh sini -->
+            <div>
+                <br>
+                <div class="ornamentwdbtm" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vinbtmwd.png" alt="" style="display: inline-block;" width="100%">
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+
+        </div>
+    </div>
+
+    <div id="Quotewd" class="tabcontent">
+
+        <div class="corner1">
+            <img src="assets/de13oraset1.png" alt="" width="100%">
+        </div>
+
+        <div class="corner2">
+            <img src="assets/de13oraset2.png" alt="" width="100%">
+        </div>
+
+        <div class="corner3">
+            <img src="assets/de13oraset3.png" alt="" width="100%">
+        </div>
+
+        <div class="corner4">
+            <img src="assets/de13oraset4.png" alt="" width="100%">
+        </div>
+
+        <div class="corner5">
+            <img src="assets/de13oraset5.png" alt="" width="100%">
+        </div>
+
+        <div class="corner6">
+            <img src="assets/de13oraset6.png" alt="" width="100%">
+        </div>
+
+
+
+
+        <div id="homewd" class="contentwd">
+
+            <div class="ornamentwdtop" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vintopwd.png" alt="" style="display: inline-block;" width="100%">
+            </div>
+<div class="content4pad">
+            <br>
+            <h3 style="font-family: Angelface; font-size: 35px; color: #404040;">Our Love Story</h3>
+            <p class="explainbride">--</p>
+            <p class="explainbride">Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.</p>
+            <p class="explainbride"><b>QS. Ar-Rum: 21</b></p>
+            <p class="explainbride">--</p>
+
+            <!-- !PAGE CONTENT! -->
+            <div class="w3-main w3-content" style="max-width:1600px;margin-top:20px">
+                
+                <!-- Timeline Start                 -->
+                <div class="timeline">
+                      <div class="container left">
+                        <div class="content">
+                            <div class="bg1content">
+                              <h2 class="yearstory"><span style="font-size: 14px"></span>2018</h2>
+                              <p>"Pertama kali kami berkenalan, mulai dekat lalu sering mengobrol dan ada ketertarikan satu sama lain."</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="content">
+                            <div class="bg1content">
+                              <h2 class="yearstory"><span style="font-size: 14px"></span>2019</h2>
+                              <p>"Tahun ini merupakan tahun terberat dalam hubungan kami karna diuji dalam berbagai hal, terutama beratnya menjalani Long-Distance-Relationship (LDR)."</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="container left">
+                        <div class="content">
+                            <div class="bg1content">
+                              <h2 class="yearstory"><span style="font-size: 14px"></span>2020</h2>
+                              <p>"Tahun ini kita sudah tidak LDR lagi, sehingga kita dapat saling berbagi kasih, dan memantapkan diri menuju jenjang selanjutnya."</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="content">
+                            <div class="bg1content">
+                              <h2 class="yearstory"><span style="font-size: 14px"></span>2021</h2>
+                              <p>"Tahun dimana kita telah berkomitmen dan sudah mulai mempersiapkan ke tahap yang lebih serius."</p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+
+                <!-- timeline end -->
+
+                <br>
+                <div class="containerlovegiftwd">
+                    <h2 style="color: #404040; font-size: 30px; font-family: Angelface; padding-top: 20px">Love Gift
+                        <br>
+                        <span style="font-size:15px; line-height: 25px;" class="explainbride">
+                            <p>Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami, dapat melalui :</p>
+                        </span>
+                    </h2>
+                    <br>
+                    <p>Bank Mandiri</p> 
+                    <p>No. Rekening, Atas Nama</p>
+                    <p style="margin-bottom: 10px; padding-bottom: 20px; color:#BD742E"><b id="rek">1610007526275</b>, <b>Lalu Parhan Azis Soenandar</b></p>
+                    <input type="button" onclick="copyrek()" value="Salin Nomor Rekening" id="copyclipboard" style="margin-bottom:10px;">
+                    <br><br>
+                    <p>atau melalui :</p>
+                    <p><b>E-Wallet</b></p><br>
+                     <img src="./images/logo-ovo.png" width="80px" height="32.96px" style="margin-right:20px;" id="logoovo">
+                        <img src="./images/linkaja.png" width="80px" height="24.36548223px" id="logolinkaja"> 
+                     <br><br>
+                    <p><b>-Terima kasih-</b></p><br>
+                </div>
+
+                <br>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div id="modal-ovo">
+            <div class="modal-header">
+                <span class="closemodal">&times;</span>
+                <h4><img src="./images/logo-ovo.png" width="80px" height="32.96px" style="margin-right:20px;" id="logoovo"></h4>
+                <!-- <p>Silahkan scan qrcode berikut :</p> -->
+            </div>
+            <div class="modal-body">
+                <!-- <img src="./images/ovoqr.jpg" width="80%"> -->
+            </div>
+            <div class="modal-footer">
+                <!-- <p>0821-1253-8367</p> -->
+            </div>
+        </div>
+
+        <div id="modal-linkaja">
+                <div class="modal-header">
+                    <span class="closemodal">&times;</span>
+                    <h4><img src="./images/linkaja.png" width="80px" height="24.36548223px" id="logolinkaja"></h4>
+                    <!-- <p>Silahkan scan qrcode berikut :</p> -->
+                </div>
+                <div class="modal-body">
+                    <!-- <img src="./images/linkajaqr.jpg" width="80%"> -->
+                </div>
+                <div class="modal-footer">
+                    <!-- <p>0821-1253-8367</p> -->
+                </div>
+        </div>
+    </div>
+</div>
+
+                <div class="">
+                    <p class="explainbride">Ucapan Selamat & Doa untuk<h4 style="color: #404040; font-size: 30px; font-family: Angelface;">Azis & Nova</h4></p>
+                </div>
+
+                <div class="wishspace">
+                    <div class="wishcontainer">
+                        <label for="nama">Nama</label>
+                        <input type="text" id="nama" name="nama" placeholder="Nama.." required>
+
+                        <label for="ucap">Ucapan</label>
+                        <textarea id="ucap" name="ucap" placeholder="Ucapan Doa & Harapan.." style="height:100px" required></textarea>
+                        <input type="submit" name="submit" value="Kirim Via Whatsapp" onclick="getLinkWhatsapp()">
+                    </div>
+                    <div class="hormatkami">
+                        <br>
+                        <h4 style="color: #404040; font-size: 30px; font-family: Angelface;">Kami Yang Berbahagia</h4>
+                        <p>Keluarga H. Lalu Iskandar<br>& Ibu Baiq Saodah</p>
+                        <p style="font-size:20px">- & -</p>
+                        <p>Keluarga Bapak Lalu Awaludin<br>& Ibu Surya Darmiyanti</p>
+                    </div>
+               </div>
+
+            </div>
+</div>
+            <div>
+                <div class="ornamentwdbtm" style="width: 100%; margin: 0px; text-align: center;">
+                <img src="assets/de13vinbtmwd.png" alt="" style="display: inline-block;" width="100%">
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+
+        </div>
+    </div>
+
+    <script>
+
+// Get the modal
+var modal       = document.getElementById("myModal");
+var logoovo     = document.getElementById("logoovo");
+var logolinkaja = document.getElementById("logolinkaja");
+var movo        = document.getElementById("modal-ovo")
+var mlinkaja    = document.getElementById("modal-linkaja")
+var spanovo     = document.getElementsByClassName("closemodal")[0]
+var spanlinkaja = document.getElementsByClassName("closemodal")[1]
+
+logoovo.onclick = function() {
+  modal.style.display    = "block";
+  movo.style.display     = "block"
+  mlinkaja.style.display = "none";
+}
+
+logolinkaja.onclick      = function() {
+  modal.style.display    = "block";
+  movo.style.display     = "none";
+  mlinkaja.style.display = "block"
+}
+
+spanovo.onclick = function() {
+  modal.style.display    = "none";
+  movo.style.display     = "none";
+  mlinkaja.style.display = "none";
+}
+
+spanlinkaja.onclick = function() {
+  modal.style.display    = "none";
+  movo.style.display     = "none";
+  mlinkaja.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display    = "none";
+    movo.style.display     = "none";
+    mlinkaja.style.display = "none";
+  }
+}
+
+        // %20 mean space in link
+        // If you already had an array then you just join them with '%20'
+        // easy right
+
+        function getLinkWhatsapp() {
+        var yourNumber = "6287831701211"
+        var yourName   = document.getElementById("nama").value;
+        var yourMessage = document.getElementById("ucap").value;
+        
+        number = yourNumber
+        nama   = yourName.split(' ').join('%20')
+        message = yourMessage.split(' ').join('%20')
+        window.location.href='https://api.whatsapp.com/send?phone=' + number + '&text=from%20*'+nama+'*%0a%0a*Hi%20Azis%20dan%20Nova*,%0a%0a'+ message
+        }
+
+        function copyrek()
+        {
+            var rek = document.getElementById("rek").innerText;
+            var myTemporaryInputElement = document.createElement("input");
+                myTemporaryInputElement.type = "text";
+                myTemporaryInputElement.value = rek;
+                document.body.appendChild(myTemporaryInputElement);
+                myTemporaryInputElement.select();
+                document.execCommand("Copy");
+                document.body.removeChild(myTemporaryInputElement);
+                if(document.getElementById("copyclipboard").value == "Nomor Rekening Disalin")
+                {document.getElementById("copyclipboard").value = "Salin Nomor Rekening"}
+                else{document.getElementById("copyclipboard").value = "Nomor Rekening Disalin"}
+
+        }
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+
+            document.getElementById('mute-sound').style.display = 'none';
+            document.getElementById('unmute-sound').addEventListener('click', function (event) {
+                document.getElementById('unmute2-sound').style.display = 'none';
+                document.getElementById('mute-sound').style.display = 'inline-block';
+                document.getElementById('song').play();
+            });
+            
+            document.getElementById('unmute2-sound').addEventListener('click', function (event) {
+                document.getElementById('unmute2-sound').style.display = 'none';
+                document.getElementById('mute-sound').style.display = 'inline-block';
+                document.getElementById('song').play();
+            });
+
+            document.getElementById('mute-sound').addEventListener('click', function (event) {
+                document.getElementById('mute-sound').style.display = 'none';
+                document.getElementById('unmute2-sound').style.display = 'inline-block';
+                document.getElementById('song').pause();
+            });
+
+
+        // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
+
+        var deadline = new Date("may 15, 2022 09:00:00").getTime();
+
+            var x = setInterval(function () {
+
+                var now = new Date().getTime();
+                var t = deadline - now;
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                document.getElementById("day").innerHTML = days;
+                document.getElementById("hour").innerHTML = hours;
+                document.getElementById("minute").innerHTML = minutes;
+                document.getElementById("second").innerHTML = seconds;
+                if (t < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "HAPPY WEDDING";
+                    document.getElementById("day").innerHTML = '0';
+                    document.getElementById("hour").innerHTML = '0';
+                    document.getElementById("minute").innerHTML = '0';
+                    document.getElementById("second").innerHTML = '0';
+                }
+            }, 1000);
+
+
+            function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            var sn = getParameterByName('to');
+
+            document.getElementById("write").innerHTML = sn;
+
+    </script>
+    <script type="text/javascript" src="atemplate/jquery-1.10.1.min.js"></script>
+
+    <!-- <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn4");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+    </script> -->
+
+
+
+</body>
+
 </html>
